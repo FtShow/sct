@@ -17,7 +17,6 @@ export const getMeters = async ({ limit, offset }: GetMetersParams) => {
 
 export const deleteMeter = async (meterId: string) => {
     const response = await fetch(`/api/meters/${meterId}/`, { method: 'DELETE' });
-    console.log('was deleted', response);
 
 
     if (!response.ok) {
