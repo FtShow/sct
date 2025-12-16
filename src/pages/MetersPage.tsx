@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../models/StoreContext.ts';
 import { Pagination } from '../components/pagination/Pagination.tsx';
-import { Table } from '../components/table/Table.tsx';
+import { MetersTable } from '../components/table/Table.tsx';
 import { MetersPageWrapper, PaginationContainer } from './MetersPage.styles.ts';
 
 export const MetersPage = observer(() => {
@@ -21,7 +21,7 @@ export const MetersPage = observer(() => {
   return (
     <MetersPageWrapper>
       <h1>Список счетчиков</h1>
-      <Table
+      <MetersTable
         meters={store.meters}
         onDelete={store.removeMeter}
         isLoading={store.isLoading}

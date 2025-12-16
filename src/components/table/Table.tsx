@@ -17,7 +17,7 @@ type Props = {
   isLoading: boolean;
   onDelete: (id: string) => Promise<void>;
 };
-export const Table = observer(({ meters, areas, isLoading, onDelete }: Props) => {
+export const MetersTable = observer(({ meters, areas, isLoading, onDelete }: Props) => {
   return (
       <TableContainer $disabled={isLoading}>
         <StyledTable>
